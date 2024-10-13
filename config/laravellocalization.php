@@ -109,7 +109,7 @@ return [
         //'ses'         => ['name' => 'Songhay',                'script' => 'Latn', 'native' => 'Koyraboro senni', 'regional' => ''],
         //'mfe'         => ['name' => 'Morisyen',               'script' => 'Latn', 'native' => 'kreol morisien', 'regional' => ''],
         //'ht'          => ['name' => 'Haitian',                'script' => 'Latn', 'native' => 'Kreyòl ayisyen', 'regional' => 'ht_HT'],
-        //'kj'          => ['name' => 'Kuanyama',               'script' => 'Latn', 'native' => 'Kwanyama', 'regional' => ''],
+       // 'kj'          => ['name' => 'Kuanyama',               'script' => 'Latn', 'native' => 'Kwanyama', 'regional' => ''],
         //'ksh'         => ['name' => 'Kölsch',                 'script' => 'Latn', 'native' => 'Kölsch', 'regional' => ''],
         //'ebu'         => ['name' => 'Kiembu',                 'script' => 'Latn', 'native' => 'Kĩembu', 'regional' => ''],
         //'mer'         => ['name' => 'Kimîîru',                'script' => 'Latn', 'native' => 'Kĩmĩrũ', 'regional' => ''],

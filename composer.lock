@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b00f1260608c626d883880cd63d8e512",
+    "content-hash": "0209289fcb04fd9fbaa98bb2dc12ef09",
     "packages": [
         {
             "name": "astrotomic/laravel-translatable",
@@ -1144,6 +1144,120 @@
             "time": "2023-12-03T19:50:20+00:00"
         },
         {
+            "name": "laraeast/laravel-bootstrap-forms",
+            "version": "v5.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laraeast/laravel-bootstrap-forms.git",
+                "reference": "47743e8dfc3cf8da5463ee7947abd3d74c7ae0ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laraeast/laravel-bootstrap-forms/zipball/47743e8dfc3cf8da5463ee7947abd3d74c7ae0ac",
+                "reference": "47743e8dfc3cf8da5463ee7947abd3d74c7ae0ac",
+                "shasum": ""
+            },
+            "require": {
+                "laraeast/laravel-locales": "^3.3",
+                "laravelcollective/html": "^5.6|^6.0|^7.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^5.3|^6.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laraeast\\LaravelBootstrapForms\\Providers\\BootstrapFormsServiceProvider"
+                    ],
+                    "aliases": {
+                        "BsForm": "Laraeast\\LaravelBootstrapForms\\Facades\\BsForm"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laraeast\\LaravelBootstrapForms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ahmed Al-Shahawi",
+                    "email": "alshahawi@outlook.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ahmed Fathy",
+                    "email": "aliraqi.dev@gmail.com"
+                }
+            ],
+            "description": "Provides an easy way to use bootstrap components within your Laravel projects.",
+            "support": {
+                "issues": "https://github.com/laraeast/laravel-bootstrap-forms/issues",
+                "source": "https://github.com/laraeast/laravel-bootstrap-forms/tree/v5.4.0"
+            },
+            "time": "2023-03-25T23:38:34+00:00"
+        },
+        {
+            "name": "laraeast/laravel-locales",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laraeast/laravel-locales.git",
+                "reference": "8689ef55076a972db4f91e777b4149ed935dbb8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laraeast/laravel-locales/zipball/8689ef55076a972db4f91e777b4149ed935dbb8a",
+                "reference": "8689ef55076a972db4f91e777b4149ed935dbb8a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "~3.0|~4.0|~5.0|~6.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laraeast\\LaravelLocales\\Providers\\LocalesServiceProvider"
+                    ],
+                    "aliases": {
+                        "Locales": "Laraeast\\LaravelLocales\\Facades\\Locales"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laraeast\\LaravelLocales\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ahmed Aliraqi",
+                    "email": "aliraqi.dev@gmail.com"
+                }
+            ],
+            "description": "The package used to support multi locales in your application.",
+            "support": {
+                "issues": "https://github.com/laraeast/laravel-locales/issues",
+                "source": "https://github.com/laraeast/laravel-locales/tree/v3.3.0"
+            },
+            "time": "2023-03-03T21:16:40+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v10.48.22",
             "source": {
@@ -1663,6 +1777,79 @@
                 "source": "https://github.com/laravel/ui/tree/v4.5.2"
             },
             "time": "2024-05-08T18:07:10+00:00"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v6.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "64ddfdcaeeb8d332bd98bef442bef81e39c3910b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/64ddfdcaeeb8d332bd98bef442bef81e39c3910b",
+                "reference": "64ddfdcaeeb8d332bd98bef442bef81e39c3910b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/routing": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/session": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/view": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0|^7.0|^8.0|^9.0|^10.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~8.5|^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "support": {
+                "issues": "https://github.com/LaravelCollective/html/issues",
+                "source": "https://github.com/LaravelCollective/html"
+            },
+            "abandoned": "spatie/laravel-html",
+            "time": "2023-04-25T02:46:11+00:00"
         },
         {
             "name": "league/commonmark",
@@ -8357,5 +8544,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
