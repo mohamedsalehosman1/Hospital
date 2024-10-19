@@ -9,6 +9,6 @@ class DoctorTranslation extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name','appointments'];
+    protected $fillable = ['name'];
 public $timestamps = false;
 }

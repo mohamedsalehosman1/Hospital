@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Section;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 
@@ -18,15 +19,16 @@ class DoctorFactory extends Factory
     public function definition(): array
     {
         return [
-            "name:en"=> $this->faker->name,
-            'appointments:en'=> $this->faker->randomElement(['saturday','sunday','monday','tuesday','wendnesday','thursday','friday']),
+            "name:en" => $this->faker->name,
             "name:ar" => $this->faker->name,
-            'appointments:ar' => $this->faker->randomElement(['saturday', 'sunday', 'monday', 'tuesday', 'wendnesday', 'thursday', 'friday']),
+            // 'appointments' => json_encode($this->faker->randomElements(['saturday', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday'], 3)),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
+            'section_id' => Section::all()->random()->id,
             'password' => Hash::make('password'),
             'phone' => $this->faker->phoneNumber(),
-            'price' => $this->faker->randomElement([100, 200,300,400, 500]), // Adjust range as necessary
+            'price' => $this->faker->randomElement([100, 200, 300, 400, 500]), // Adjust range as necessary
+            'photo' => $this->faker->imageUrl(640, 480, 'people'), // توليد مسار صورة عشوائية
 
         ];
     }

@@ -76,7 +76,7 @@ Route::group(
         Route::middleware(['auth:admins'])->group(function () {
             //########################Section Routes#########################\\
             Route::resource('section',SectionController::class);
-            Route::resource('doctors', DoctorController::class);
+            Route::resource('doctor', DoctorController::class);
 
         });
 

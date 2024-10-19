@@ -15,4 +15,17 @@ return [
 
     'doctors' => 'الأطباء',
 'view_all'=>'عرض الكل',
+'name'=>'اسم الطبيب',
+'enabled'=> 'متاح',
+'Notenabled'=> 'غير متاح',
+'password'=>'الرقم السري',
+    'email' => 'البريد الالكترونى',
+    'specialty' => 'القسم',
+    'phone' => 'رقم الهاتف',
+    'appointments' => 'المواعيد',
+    'price' => 'سعر الكشف',
+    'status' => 'الحاله',
+    'created_at' => 'تاريخ الاضافه',
+    'processes' => 'العمليات',
+    'doctors_photo'=>'صوره الطبيب',
 ];

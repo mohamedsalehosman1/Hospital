@@ -3,68 +3,44 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Interfaces\Sections\SectionRepositoryInterface;
-use Illuminate\Http\Request;
+use App\Http\Requests\SectionRequest;
+use App\Models\Section;
+use App\Repository\Sections\SectionRepository;
 
 class SectionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    private $Sections;
+    private $reposatry;
 
-    public function __construct(SectionRepositoryInterface $Sections)
+    public function __construct(SectionRepository $reposatry)
     {
-        $this->Sections = $Sections;
+        $this->reposatry = $reposatry;
     }
     public function index()
     {
-
-        return $this->Sections->index();
+        $sections = $this->reposatry->index();
+        return view("dashboard.sections.sections", get_defined_vars());
     }
 
-    public function store(Request $request)
+    public function store(SectionRequest $request)
     {
-        //
-        return $this->Sections->store($request);
-
+        $ection = $this->reposatry->store($request->validated());
+        session()->flash("add");
+        return redirect()->route('section.index')->with('success', 'Section added successfully.');
     }
-    public function update(Request $request, string $id)
+    public function update(SectionRequest $request, Section $section)
     {
-        return $this->Sections->update($request);
-        //
+        $section = $this->reposatry->update($request->validated(), $section);
+        session()->flash("edit");
+        return redirect()->route('section.index')->with('success', 'تم تحديث القسم بنجاح!');
     }
-      public function destroy(Request  $request)
+
+    public function destroy(Section $section)
     {
-        return $this->Sections->destroy($request);
-        //
+        $this->reposatry->destroy($section);
+        session()->flash("delete");
+        return redirect()->route('section.index');
     }
-
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-
 }

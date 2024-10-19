@@ -15,6 +15,12 @@ class Section extends Model implements TranslatableContract
     protected $table = 'sections';
     protected $primarykey = 'id';
     public $translatedAttributes = ['name'];
+    protected $fillable = ['name:ar' , 'name:en'];
 
-    // protected $fillable = ['name'] ;
+    public function translat()
+    {
+        return $this->hasMany(SectionTranslation::class);
+    }
+
+
 }

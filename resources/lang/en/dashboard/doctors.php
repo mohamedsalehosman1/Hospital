@@ -14,6 +14,25 @@ return [
     */
 
     'doctors' => 'Doctors',
-    'view_all'=> 'View All Doctors',
+    'view_all' => 'View All Doctors',
+    'enabled' => 'Enabled',
+    'Notenabled' => ' Not Enabled',
+    'email' => 'Email',
+    'specialty' => 'Section',
+    'phone' => 'Phone',
+    'appointments' => 'Appoinments',
+    'price' => 'Price',
+    'status' => 'Status',
+    'created_at' => 'Created_at',
+    'processes' => 'Processes',
+    'password' => ' Password',
+    'doctors_photo' => 'Doctor Photo ',
 
 ];
+
+
+
+
+
+
+

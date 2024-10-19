@@ -1,4 +1,3 @@
-
 <div class="modal fade" id="addSectionModal" tabindex="-1" role="dialog" aria-labelledby="addSectionModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -10,14 +9,16 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="{{ route('section.store') }}">
-                    @csrf
-                    <div class="form-group">
-                        <label for="newSectionName">اسم القسم</label>
-                        <input type="text" class="form-control" name="name" required>
-                    </div>
-                    <button type="submit" class="btn btn-success">إضافة القسم</button>
-                </form>
+                {{ BsForm::post(route('section.store'), ['enctype' => 'multipart/form-data']) }}
+                @bsMultilangualFormTabs
+                    {{ BsForm::text('name')->name('name')->label('Section Name') }}
+                @endBsMultilangualFormTabs
+
+                {{ BsForm::submit()->label('إضافة قسم')->danger() }}
+
+                {{ BsForm::close() }}
+
+
             </div>
         </div>
     </div>

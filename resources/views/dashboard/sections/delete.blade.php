@@ -12,7 +12,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="{{ route('section.destroy', 'test') }}">
+                <form method="POST" action="{{ route('section.destroy', $section->id) }}">
                     @csrf
                     @method('delete')
                     <div class="form-group">

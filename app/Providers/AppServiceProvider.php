@@ -3,6 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Components\ImageComponent;
+
+use Illuminate\Pagination\Paginator;
+use Laraeast\LaravelBootstrapForms\Facades\BsForm;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,5 +24,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        Paginator::useBootstrap();
+
+        //
+        BsForm::registerComponent('image', ImageComponent::class);
+
     }
 }

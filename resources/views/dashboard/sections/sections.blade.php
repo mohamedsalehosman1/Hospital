@@ -84,18 +84,14 @@
                                             <a class="modal-effect btn btn-sm btn-info" data-effect="effect-scale"
                                                 data-toggle="modal" href="#edit{{ $section->id }}"><i
                                                     class="las la-pen"></i></a>
-                                            <a class="modal-effect btn btn-sm btn-info" data-effect="effect-scale"
+                                            <a class="modal-effect btn btn-sm btn-danger" data-effect="effect-scale"
                                                 data-toggle="modal" href="#delete{{ $section->id }}"><i
                                                     class="las la-trash"></i></a>
-
                                         </td>
-                                        @include('dashboard.sections.edit')
-                                        @include('dashboard.sections.delete')
-
                                     </tr>
                                 @endforeach
-
                             </tbody>
+
                         </table>
                     </div>
                 </div>
@@ -104,6 +100,11 @@
 
 
         @include('dashboard.sections.add')
+
+        @foreach ($sections as $section)
+            @include('dashboard.sections.edit', ['section' => $section])
+            @include('dashboard.sections.delete', ['section' => $section])
+        @endforeach
         <!-- row closed -->
     </div>
     <!-- Container closed -->
